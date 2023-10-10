@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class AppTextStyles{
   static TextStyle headerTextStyle() {
     return GoogleFonts.pacifico(
-      fontSize: 18,
+      fontSize: 20,
       fontWeight: FontWeight.w500,
       color: Colors.white,
       letterSpacing: 1
@@ -14,13 +14,13 @@ class AppTextStyles{
     return GoogleFonts.alegreya(
       color: color,
       fontWeight: FontWeight.w800,
-      fontSize: 24,
+      fontSize: 35,
       letterSpacing: 2
     );
   }
-  static TextStyle headingStyle({double fontSize = 36, Color color = Colors.white,}){
+  static TextStyle headingStyle({ Color color = Colors.white,}){
     return GoogleFonts.abrilFatface(
-      fontSize: fontSize,
+      fontSize: 60,
       fontWeight: FontWeight.bold,
       color: color,
       letterSpacing: 3,
@@ -29,7 +29,7 @@ class AppTextStyles{
   static TextStyle normalStyle(){
     return GoogleFonts.signikaNegative(
       fontWeight: FontWeight.w500,
-      fontSize: 17,
+      fontSize: 25,
       color: Colors.white,
       letterSpacing: 1
     );
