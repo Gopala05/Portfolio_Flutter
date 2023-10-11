@@ -28,7 +28,7 @@ class _HomePage extends State<HomePage> {
 
     // Listen to scroll events and show/hide the AboutMe() section
     _scrollController.addListener(() {
-      if (_scrollController.offset > 80) {
+      if (_scrollController.offset > 50) {
         setState(() {
           isFade = true;
         });
@@ -204,15 +204,15 @@ class _HomePage extends State<HomePage> {
                                     children: [
                                       buildSocialButton(asset: AppAssets.facebook),
                                       Constants.sizedBox(
-                                        width: 12,
+                                        width: 15,
                                       ),
                                       buildSocialButton(asset: AppAssets.github),
                                       Constants.sizedBox(
-                                        width: 12,
+                                        width: 15,
                                       ),
                                       buildSocialButton(asset: AppAssets.linkedIn),
                                       Constants.sizedBox(
-                                        width: 12,
+                                        width: 15,
                                       ),
                                       buildSocialButton(asset: AppAssets.insta)
                                     ],
@@ -221,8 +221,10 @@ class _HomePage extends State<HomePage> {
                                 Constants.sizedBox(height: 22),
                                 FadeInUp(
                                   duration: const Duration(milliseconds: 500),
-                                  child: AppButtons.buildMaterialButton(onTap: () {},
-                                  buttonName: 'Download CV'),
+                                  child: AppButtons.buildMaterialButton(onTap: () {
+                                    _scrollToBottom();
+                                  },
+                                  buttonName: 'Want to Know More..??'),
                                 ),
                               ],
                             ),
@@ -259,11 +261,17 @@ class _HomePage extends State<HomePage> {
           ),
     );
   }
-
+  void _scrollToBottom() {
+    _scrollController.animateTo(
+      500, //Scroll Range like how much it should scroll
+      duration: const Duration(seconds: 1), // Adjust the duration as needed
+      curve: Curves.easeInOut,
+    );
+  }
   Ink buildSocialButton({required String asset}) {
     return Ink(
-      width: 45,
-      height: 45,
+      width: 60,
+      height: 60,
       decoration: BoxDecoration(
         border: Border.all(color: AppColors.themeColor, width: 2.5),
         color: AppColors.bgColor,
@@ -272,14 +280,13 @@ class _HomePage extends State<HomePage> {
       padding: const EdgeInsets.all(6),
       child: InkWell(
         onTap: () {},
-        radius: 50,
         borderRadius: BorderRadius.circular(500.0),
         hoverColor: AppColors.aqua,
         splashColor: AppColors.lowGreen,
         child: Image.asset(
           asset,
-          width: 10,
-          height: 12,
+          width: 30,
+          height: 32,
           color: AppColors.themeColor,
           // fit: BoxFit.contain,
         ),
