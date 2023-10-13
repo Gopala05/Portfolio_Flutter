@@ -13,6 +13,20 @@ class AboutMe extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Container(
+      height: size.height * 0.7,
+      width: size.width,
+      alignment: Alignment.center,
+      child: Row(
+        children: [
+          Lottie.asset(
+            'assets/images/About.json', // The path of the animation file
+            height: 600, // The height of the animation
+            width: 550, // The width of the animation
+            fit: BoxFit.cover, // Fit the animation to the screen size
+            repeat: true, // Whether to repeat the animation or not
+            reverse: false, // Whether to reverse the animation or not
+            animate: true, // Whether to play the animation or not
+          ),
           Constants.sizedBox(width: 130),
           Expanded(
             child: Padding(
@@ -54,6 +68,12 @@ class AboutMe extends StatelessWidget {
                     child: AppButtons.buildMaterialButton(onTap: () {},
                         buttonName: 'Read More'),
                   ),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
