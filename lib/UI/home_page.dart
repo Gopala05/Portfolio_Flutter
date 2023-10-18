@@ -86,13 +86,13 @@ class _HomePage extends State<HomePage> {
               'Services',
               style: AppTextStyles.headerTextStyle(),
             ),
-            const SizedBox(
-              width: 30,
-            ),
-            Text(
-              'Portfolio',
-              style: AppTextStyles.headerTextStyle(),
-            ),
+            // const SizedBox(
+            //   width: 30,
+            // ),
+            // Text(
+            //   'Portfolio',
+            //   style: AppTextStyles.headerTextStyle(),
+            // ),
             const SizedBox(
               width: 30,
             ),
