@@ -58,7 +58,7 @@ class AboutMe extends StatelessWidget {
                   FadeInLeft(
                     duration: const Duration(milliseconds: 1200),
                     child: Text("I have been involved in product development since my early days and know insights into it. "
-                        "I have provided my valuable input while taking some crucial decisions of the app by brainstorming with a design, QA team. "
+                        "I have provided my valuable input while taking some crucial decisions of the app by brainstorming with a design."
                         "I have been developing mobile apps and libraries using Google's Flutter framework since its inception.", textAlign: TextAlign.justify,
                       style: AppTextStyles.normalStyle(),),
                   ),
