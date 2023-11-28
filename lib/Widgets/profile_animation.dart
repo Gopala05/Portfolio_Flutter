@@ -1,7 +1,5 @@
 import 'dart:html';
-
 import 'package:flutter/material.dart';
-
 import '../Global/app_assets.dart';
 
 class ProfileAnimation extends StatefulWidget {
