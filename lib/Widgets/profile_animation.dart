@@ -17,7 +17,7 @@ class _ProfileAnimationState extends State<ProfileAnimation> with TickerProvider
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(vsync: this, duration: Duration(seconds: 3))
+    _controller = AnimationController(vsync: this, duration: Duration(seconds: 4))
     ..repeat(reverse: true);
     _animation = Tween(begin: const Offset(0,0), end: const Offset(0, 0.2)).animate(_controller);
   }
