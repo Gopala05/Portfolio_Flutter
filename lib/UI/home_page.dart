@@ -159,7 +159,7 @@ class _HomePage extends State<HomePage> {
                                       ),
                                       AnimatedTextKit(
                                         animatedTexts: [
-                                          TyperAnimatedText('Android Developer',
+                                          TyperAnimatedText('Android and React Developer',
                                               textStyle: AppTextStyles.montserratStyle(
                                                   color: AppColors.aqua)),
                                           TyperAnimatedText('Student',
@@ -254,6 +254,7 @@ class _HomePage extends State<HomePage> {
           ),
     );
   }
+  
   void _scrollToBottom() {
     _scrollController.animateTo(
       500, //Scroll Range like how much it should scroll
@@ -261,6 +262,7 @@ class _HomePage extends State<HomePage> {
       curve: Curves.easeInOut,
     );
   }
+  
   Ink buildSocialButton({required String asset}) {
     return Ink(
       width: 60,
