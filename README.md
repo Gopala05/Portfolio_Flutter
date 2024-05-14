@@ -1,3 +1,3 @@
 # Portfolio GK
 
-Portfolio created using Flutter
+Portfolio build using Flutter
